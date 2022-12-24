@@ -10,7 +10,6 @@ function Row({ title, path, isLarge }) {
 	const fetchMovies = async (_path) => {
 		try {
 			const data = await getMovies(_path);
-			console.log("data", data);
 			setMovies(data?.results);
 		} catch (error) {
 			console.log("fetchMovies error: ", error);
@@ -30,7 +29,7 @@ function Row({ title, path, isLarge }) {
 						<img
 							className={`movie-card ${isLarge && "movie-card-large"}`}
 							key={movie.id}
-							src={`${imageHost}${movie.poster_path}`}
+							src={`${imageHost}${isLarge ? movie.backdrop_path : movie.poster_path}`}
 							alt={movie.name}
 						></img>
 					)
