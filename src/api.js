@@ -1,31 +1,30 @@
 const API_KEY = "677b92ff8171c058571864a576c045fc";
-const language = "pt-BR";
 
 const categories = [
 	{
 		name: "trending",
 		title: "Em alta",
-		path: `trending/all/week?api_key=${API_KEY}&language=${language}`,
+		path: `trending/all/week?api_key=${API_KEY}`,
 		isLarge: true,
 	}, {
 		name: "netflixOriginals",
 		title: "Originais Netlix",
-		path: `discover/tv?api_key=${API_KEY}&with_networks=213&language=${language}`,
+		path: `discover/tv?api_key=${API_KEY}&with_networks=213`,
 		isLarge: false,
 	}, {
 		name: "comedy",
 		title: "Comédias",
-		path: `discover/tv?api_key=${API_KEY}&with_genres=35&language=${language}`,
+		path: `discover/tv?api_key=${API_KEY}&with_genres=35`,
 		isLarge: false,
 	}, {
 		name: "romances",
 		title: "Romances",
-		path: `discover/tv?api_key=${API_KEY}&with_genres=10749&language=${language}`,
+		path: `discover/tv?api_key=${API_KEY}&with_genres=10749`,
 		isLarge: false,
 	}, {
 		name: "documentary",
 		title: "Documentário",
-		path: `discover/tv?api_key=${API_KEY}&with_genres=99&language=${language}`,
+		path: `discover/tv?api_key=${API_KEY}&with_genres=99`,
 		isLarge: false,
 	},
 ];
